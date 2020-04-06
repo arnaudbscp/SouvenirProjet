@@ -8,17 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Accueil: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
+
     var imagePicker: UIImagePickerController?
     
     @IBOutlet var selectionnerImage: UIButton!
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

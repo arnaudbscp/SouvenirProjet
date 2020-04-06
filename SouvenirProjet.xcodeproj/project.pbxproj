@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		FCDFCD3A23A550CE00457390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFCD3923A550CE00457390 /* AppDelegate.swift */; };
 		FCDFCD3C23A550CE00457390 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFCD3B23A550CE00457390 /* SceneDelegate.swift */; };
-		FCDFCD3E23A550CE00457390 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFCD3D23A550CE00457390 /* ViewController.swift */; };
+		FCDFCD3E23A550CE00457390 /* Accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFCD3D23A550CE00457390 /* Accueil.swift */; };
 		FCDFCD4123A550CE00457390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDFCD3F23A550CE00457390 /* Main.storyboard */; };
 		FCDFCD4323A550D000457390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDFCD4223A550D000457390 /* Assets.xcassets */; };
 		FCDFCD4623A550D000457390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDFCD4423A550D000457390 /* LaunchScreen.storyboard */; };
 		FCDFCD5123A550D000457390 /* SouvenirProjetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFCD5023A550D000457390 /* SouvenirProjetTests.swift */; };
+		FCDFCD5C23A55DA200457390 /* Souvenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFCD5B23A55DA100457390 /* Souvenir.swift */; };
+		FCECF35B23B003AE000A2820 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FCECF35A23B003AE000A2820 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +32,7 @@
 		FCDFCD3623A550CE00457390 /* SouvenirProjet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SouvenirProjet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCDFCD3923A550CE00457390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCDFCD3B23A550CE00457390 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCDFCD3D23A550CE00457390 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCDFCD3D23A550CE00457390 /* Accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accueil.swift; sourceTree = "<group>"; };
 		FCDFCD4023A550CE00457390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCDFCD4223A550D000457390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCDFCD4523A550D000457390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		FCDFCD4C23A550D000457390 /* SouvenirProjetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SouvenirProjetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCDFCD5023A550D000457390 /* SouvenirProjetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouvenirProjetTests.swift; sourceTree = "<group>"; };
 		FCDFCD5223A550D000457390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCDFCD5B23A55DA100457390 /* Souvenir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Souvenir.swift; sourceTree = "<group>"; };
+		FCECF35A23B003AE000A2820 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +83,15 @@
 		FCDFCD3823A550CE00457390 /* SouvenirProjet */ = {
 			isa = PBXGroup;
 			children = (
+				FCECF35A23B003AE000A2820 /* Resnet50.mlmodel */,
 				FCDFCD3923A550CE00457390 /* AppDelegate.swift */,
 				FCDFCD3B23A550CE00457390 /* SceneDelegate.swift */,
-				FCDFCD3D23A550CE00457390 /* ViewController.swift */,
+				FCDFCD3D23A550CE00457390 /* Accueil.swift */,
 				FCDFCD3F23A550CE00457390 /* Main.storyboard */,
 				FCDFCD4223A550D000457390 /* Assets.xcassets */,
 				FCDFCD4423A550D000457390 /* LaunchScreen.storyboard */,
 				FCDFCD4723A550D000457390 /* Info.plist */,
+				FCDFCD5B23A55DA100457390 /* Souvenir.swift */,
 			);
 			path = SouvenirProjet;
 			sourceTree = "<group>";
@@ -200,7 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCDFCD3E23A550CE00457390 /* ViewController.swift in Sources */,
+				FCECF35B23B003AE000A2820 /* Resnet50.mlmodel in Sources */,
+				FCDFCD3E23A550CE00457390 /* Accueil.swift in Sources */,
+				FCDFCD5C23A55DA200457390 /* Souvenir.swift in Sources */,
 				FCDFCD3A23A550CE00457390 /* AppDelegate.swift in Sources */,
 				FCDFCD3C23A550CE00457390 /* SceneDelegate.swift in Sources */,
 			);
