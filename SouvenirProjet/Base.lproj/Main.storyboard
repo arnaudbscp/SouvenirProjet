@@ -35,6 +35,20 @@
                                 <rect key="frame" x="20" y="309" width="339" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResCell" id="jig-qO-R03">
+                                        <rect key="frame" x="0.0" y="28" width="339" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jig-qO-R03" id="2Ji-yC-zKN">
+                                            <rect key="frame" x="0.0" y="0.0" width="339" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bnf-6F-oNU" id="fum-t9-FQo"/>
+                                    <outlet property="delegate" destination="Bnf-6F-oNU" id="68F-Ox-RGp"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y65-2v-LXg">
                                 <rect key="frame" x="20" y="101" width="158" height="30"/>
@@ -134,6 +148,7 @@
                         <outlet property="explications" destination="8R0-W3-VIV" id="uQ1-WU-rbX"/>
                         <outlet property="imageChoisie" destination="HIz-s9-Phg" id="vWI-FK-7dp"/>
                         <outlet property="resultat" destination="g2A-Wn-ypt" id="A7c-5H-9I7"/>
+                        <outlet property="tableau" destination="nTe-jQ-25R" id="PAs-dh-CmF"/>
                         <outlet property="titreSouvenir" destination="ZRl-e2-EXr" id="qR0-CT-JLN"/>
                     </connections>
                 </viewController>

@@ -10,12 +10,15 @@ import UIKit
 import Vision
 import CoreML
 
-class Souvenir: UIViewController {
+class Souvenir: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+
     
     @IBOutlet var resultat: UILabel!
     @IBOutlet var explications: UILabel!
     @IBOutlet var titreSouvenir: UITextField!
     @IBOutlet var imageChoisie: UIImageView!
+    @IBOutlet var tableau: UITableView!
     // Image sélectionnée, on modifie l'élément imageChoisie selon les cas
     internal var selectedImage: UIImage? {
         get {
@@ -33,6 +36,7 @@ class Souvenir: UIViewController {
         }
     }
     var imagePickerController: UIImagePickerController?
+    var resultatTableau: [String] = []
     
     override func viewDidLoad() {
         explications.lineBreakMode = .byWordWrapping
@@ -42,6 +46,16 @@ class Souvenir: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return resultatTableau.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ResCell")
+        cell?.textLabel?.text = resultatTableau[indexPath.row]
+        return cell!
     }
     
     @IBAction func backAction(_ sender: UIButton) {
@@ -79,19 +93,33 @@ class Souvenir: UIViewController {
         
         let request = VNCoreMLRequest(model: model) {[weak self] request, error in
             let results = request.results as? [VNClassificationObservation]
-            var outputText = ""
+            var outputText = [""]
             var top5 = 0
             for res in results!{
                 if top5 < 5 {
-                    top5 = top5+1
-                    outputText += "Tag généré : \(self!.genererTag(res.identifier)) \n"
-                    outputText += "C'est un  \(res.identifier) à \(Int(res.confidence * 100))%. \n"
+                    var valide = true
+                    for i in outputText {
+                        if i == self!.genererTag(res.identifier) {
+                            valide = false
+                        }
+                    }
+                    if valide == true {
+                        outputText.append(self!.genererTag(res.identifier))
+                        top5 = top5+1
+                    }
                 }
             }
             print(outputText)
             // Update the Main UI Thread with our result
             DispatchQueue.main.async { [weak self] in
-                self?.resultat.text! = outputText
+                self?.resultat.text! = "Trouvé ! Sélectionner parmi:"
+                self?.resultatTableau = []
+                for i in outputText {
+                    if !i.isEmpty {
+                        self?.resultatTableau.append(i)
+                        self?.tableau.reloadData()
+                    }
+                }
             }
         }
         
@@ -181,4 +209,5 @@ extension Souvenir: UIImagePickerControllerDelegate, UINavigationControllerDeleg
         textField.resignFirstResponder()
         return true
     }
+    
 }
