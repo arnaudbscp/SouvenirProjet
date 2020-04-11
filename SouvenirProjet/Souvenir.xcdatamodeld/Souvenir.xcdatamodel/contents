@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SouvenirCree" representedClassName=".SouvenirCree" syncable="YES" codeGenerationType="category">
+        <attribute name="annee" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="approximatif" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="contexte" optional="YES" attributeType="String"/>
+        <attribute name="createur" optional="YES" attributeType="String"/>
+        <attribute name="emotions" optional="YES" attributeType="String"/>
+        <attribute name="img" optional="YES" attributeType="Binary"/>
+        <attribute name="jour" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lieu" optional="YES" attributeType="String"/>
+        <attribute name="mois" optional="YES" attributeType="String"/>
+        <attribute name="partage" optional="YES" attributeType="String"/>
+        <attribute name="pays" optional="YES" attributeType="String"/>
+        <attribute name="qui" optional="YES" attributeType="String"/>
+        <attribute name="tags" optional="YES" attributeType="String"/>
+        <attribute name="titre" optional="YES" attributeType="String"/>
+        <attribute name="ville" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="SouvenirCree" positionX="-63" positionY="-18" width="128" height="268"/>
+    </elements>
+</model>

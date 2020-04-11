@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC36AA5A24426E13002EECFA /* Etape1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC36AA5924426E13002EECFA /* Etape1.swift */; };
+		FC36AA5D24426F2B002EECFA /* Souvenir.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC36AA5B24426F2B002EECFA /* Souvenir.xcdatamodeld */; };
+		FC36AA5F244272AF002EECFA /* SouvenirCree.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC36AA5E244272AF002EECFA /* SouvenirCree.swift */; };
 		FCDFCD3A23A550CE00457390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFCD3923A550CE00457390 /* AppDelegate.swift */; };
 		FCDFCD3C23A550CE00457390 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFCD3B23A550CE00457390 /* SceneDelegate.swift */; };
 		FCDFCD3E23A550CE00457390 /* Accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFCD3D23A550CE00457390 /* Accueil.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC36AA5924426E13002EECFA /* Etape1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape1.swift; sourceTree = "<group>"; };
+		FC36AA5C24426F2B002EECFA /* Souvenir.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Souvenir.xcdatamodel; sourceTree = "<group>"; };
+		FC36AA5E244272AF002EECFA /* SouvenirCree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouvenirCree.swift; sourceTree = "<group>"; };
 		FCDFCD3623A550CE00457390 /* SouvenirProjet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SouvenirProjet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCDFCD3923A550CE00457390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCDFCD3B23A550CE00457390 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 				FCDFCD3923A550CE00457390 /* AppDelegate.swift */,
 				FCDFCD3B23A550CE00457390 /* SceneDelegate.swift */,
 				FCDFCD3D23A550CE00457390 /* Accueil.swift */,
+				FC36AA5924426E13002EECFA /* Etape1.swift */,
+				FC36AA5B24426F2B002EECFA /* Souvenir.xcdatamodeld */,
+				FC36AA5E244272AF002EECFA /* SouvenirCree.swift */,
 				FCDFCD3F23A550CE00457390 /* Main.storyboard */,
 				FCDFCD4223A550D000457390 /* Assets.xcassets */,
 				FCDFCD4423A550D000457390 /* LaunchScreen.storyboard */,
@@ -211,6 +220,9 @@
 				FCDFCD5C23A55DA200457390 /* Souvenir.swift in Sources */,
 				FCDFCD3A23A550CE00457390 /* AppDelegate.swift in Sources */,
 				FCDFCD3C23A550CE00457390 /* SceneDelegate.swift in Sources */,
+				FC36AA5A24426E13002EECFA /* Etape1.swift in Sources */,
+				FC36AA5D24426F2B002EECFA /* Souvenir.xcdatamodeld in Sources */,
+				FC36AA5F244272AF002EECFA /* SouvenirCree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +485,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FC36AA5B24426F2B002EECFA /* Souvenir.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC36AA5C24426F2B002EECFA /* Souvenir.xcdatamodel */,
+			);
+			currentVersion = FC36AA5C24426F2B002EECFA /* Souvenir.xcdatamodel */;
+			path = Souvenir.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FCDFCD2E23A550CE00457390 /* Project object */;
 }

@@ -58,6 +58,10 @@ class Souvenir: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(self.resultatTableau[indexPath.row])
+    }
+    
     @IBAction func backAction(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
@@ -138,8 +142,9 @@ class Souvenir: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func genererTag(_ mot: String) -> String {
+        print(mot)
         // Correspondance de dictionnaire selon plusieurs tags, algo primitif
-        let liste_tags:[String] = ["Naissance", "Décès", "Anniversaire", "Fête", "Enterrement", "Emmenagement", "Vacances", "Concert", "Mariage", "Voyage", "Catastrophe", "Guerre", "Noel", "Nouvelle année", "Saint Valentin", "Parc", "Repas", "Evenement"]
+        let liste_tags:[String] = ["Naissance", "Décès", "Anniversaire", "Fête", "Enterrement", "Emmenagement", "Vacances", "Concert", "Mariage", "Voyage", "Catastrophe", "Guerre", "Noel", "Nouvelle année", "Saint Valentin", "Parc", "Repas", "Evenement", "Hopital"]
         if mot == "pot, flowerpot" {
             return liste_tags[1] // Décès
         }else if mot == "coral reef" || mot == "fountain" || mot == "cliff, drop, drop-off" || mot == "valley, vale" || mot == "corn" || mot == " ear, spike, capitulum" {
@@ -154,9 +159,13 @@ class Souvenir: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return liste_tags[7] // Concert
         }else if mot == "military uniform" {
             return liste_tags[11] // Guerre
+        }else if mot == "sleeping bag" {
+            return liste_tags[5]
+        }else if mot == "stethoscope" {
+            return liste_tags[18]
+        }else {
+            return liste_tags[17]
         }
-        print(mot)
-        return mot
     }
     
     // Fonction qui afficher l'alerte et appelle le controller
@@ -182,7 +191,20 @@ class Souvenir: UIViewController, UITableViewDelegate, UITableViewDataSource {
           self.present(controller, animated: true)
     }
     
-    
+    @IBAction func envoyerDonnees(_ sender: UIButton) {
+        let souv = SouvenirCree(context: AppDelegate.viewContext)
+        souv.titre = self.titreSouvenir.text!
+        souv.img = self.imageChoisie.image!.pngData()!
+        souv.tags = "test"
+        try? AppDelegate.viewContext.save()
+        var peopleText = ""
+        for souv in SouvenirCree.all { // <-- Ici, on utilise maintenant Person.all
+            if let name = souv.titre {
+                peopleText += name + "\n"
+            }
+        }
+        print(peopleText)
+    }
 }
 
 extension Souvenir: UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
