@@ -195,15 +195,25 @@ class Souvenir: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let souv = SouvenirCree(context: AppDelegate.viewContext)
         souv.titre = self.titreSouvenir.text!
         souv.img = self.imageChoisie.image!.pngData()!
-        souv.tags = "test"
-        try? AppDelegate.viewContext.save()
-        var peopleText = ""
-        for souv in SouvenirCree.all { // <-- Ici, on utilise maintenant Person.all
-            if let name = souv.titre {
-                peopleText += name + "\n"
+        souv.tags = ""
+        for i in self.resultatTableau {
+            if i != "test" && i != " test" {
+                souv.tags! += i + "\n"
             }
         }
-        print(peopleText)
+        try? AppDelegate.viewContext.save()
+        var peopleText = ""
+        var casesCochees = ""
+        for souv in SouvenirCree.all {
+            if let name1 = souv.titre {
+                peopleText += name1 + "\n"
+            }
+            if let name2 = souv.tags {
+                casesCochees += name2 + "\n"
+            }
+        }
+        print(peopleText, casesCochees)
+        
     }
 }
 

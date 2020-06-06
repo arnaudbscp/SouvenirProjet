@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,10 +37,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResCell" id="jig-qO-R03">
-                                        <rect key="frame" x="0.0" y="28" width="339" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="339" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jig-qO-R03" id="2Ji-yC-zKN">
-                                            <rect key="frame" x="0.0" y="0.0" width="339" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="339" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="54i-TT-PwQ">
@@ -135,6 +135,7 @@
                                 </state>
                                 <connections>
                                     <action selector="envoyerDonnees:" destination="Bnf-6F-oNU" eventType="touchDown" id="fg9-iK-1cP"/>
+                                    <segue destination="jr4-9M-Pb8" kind="presentation" id="jsA-QZ-yKW"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="HIz-s9-Phg">
@@ -150,7 +151,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.24926712923308295" green="0.27588016968677326" blue="0.32951111176292303" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="7aC-vB-Zbf"/>
+                        <viewLayoutGuide key="safeArea" id="njX-lS-fhK"/>
                     </view>
                     <connections>
                         <outlet property="explications" destination="8R0-W3-VIV" id="uQ1-WU-rbX"/>
@@ -170,6 +171,7 @@
                 <viewController id="BYZ-38-t0r" customClass="Accueil" customModule="SouvenirProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="skv-ji-OpY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="612"/>
@@ -271,14 +273,14 @@
                         <color key="backgroundColor" red="0.25070712093402453" green="0.27747390230617464" blue="0.33141466506241546" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="skv-ji-OpY" firstAttribute="leading" secondItem="TI7-CF-eYk" secondAttribute="leading" id="6hH-FF-3ZM"/>
-                            <constraint firstItem="TI7-CF-eYk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Etj-ST-YwV"/>
-                            <constraint firstItem="skv-ji-OpY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IPg-Uv-uem"/>
+                            <constraint firstItem="TI7-CF-eYk" firstAttribute="bottom" secondItem="RkK-h7-Wwn" secondAttribute="bottom" id="Etj-ST-YwV"/>
+                            <constraint firstItem="skv-ji-OpY" firstAttribute="leading" secondItem="RkK-h7-Wwn" secondAttribute="leading" id="IPg-Uv-uem"/>
                             <constraint firstItem="TI7-CF-eYk" firstAttribute="top" secondItem="skv-ji-OpY" secondAttribute="bottom" constant="11" id="Xah-1Y-FDs"/>
                             <constraint firstItem="skv-ji-OpY" firstAttribute="trailing" secondItem="TI7-CF-eYk" secondAttribute="trailing" id="p4G-AM-3fi"/>
-                            <constraint firstItem="skv-ji-OpY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qLt-LV-f02"/>
-                            <constraint firstItem="skv-ji-OpY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="riy-ef-Vh4"/>
+                            <constraint firstItem="skv-ji-OpY" firstAttribute="top" secondItem="RkK-h7-Wwn" secondAttribute="top" id="qLt-LV-f02"/>
+                            <constraint firstItem="skv-ji-OpY" firstAttribute="centerX" secondItem="RkK-h7-Wwn" secondAttribute="centerX" id="riy-ef-Vh4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="RkK-h7-Wwn"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -288,7 +290,7 @@
         <!--Etape1-->
         <scene sceneID="NUF-kT-oFA">
             <objects>
-                <viewController id="jr4-9M-Pb8" customClass="Etape1" customModule="SouvenirProjet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="jr4-9M-Pb8" customClass="Etape1" customModule="SouvenirProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PH1-WI-gGD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,7 +351,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.20784313730000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Pn8-lt-6hd"/>
+                        <viewLayoutGuide key="safeArea" id="cbY-7e-s0A"/>
                     </view>
                     <navigationItem key="navigationItem" id="2EV-jw-uOX"/>
                 </viewController>
@@ -405,7 +407,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.20784313730000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Dmj-cB-jEa"/>
+                        <viewLayoutGuide key="safeArea" id="bXJ-wg-Phf"/>
                     </view>
                     <navigationItem key="navigationItem" id="XUd-9e-JFD"/>
                 </viewController>
@@ -461,7 +463,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.20784313730000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="ppP-xj-OTm"/>
+                        <viewLayoutGuide key="safeArea" id="qMb-kY-tEf"/>
                     </view>
                     <navigationItem key="navigationItem" id="Uio-px-UNT"/>
                 </viewController>
@@ -517,7 +519,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.20784313730000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="GZ9-GP-Gcj"/>
+                        <viewLayoutGuide key="safeArea" id="oxE-Db-t5O"/>
                     </view>
                     <navigationItem key="navigationItem" id="2mv-fl-znv"/>
                 </viewController>
@@ -526,15 +528,15 @@
             <point key="canvasLocation" x="4493.6000000000004" y="932.38380809595208"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="house" catalog="system" width="64" height="54"/>
-        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
-        <image name="person" catalog="system" width="64" height="58"/>
-        <image name="stats" width="1234" height="708"/>
-        <image name="tray" catalog="system" width="64" height="44"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6bV-dk-9J5"/>
         <segue reference="YSz-Wh-Xva"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="128" height="81"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="stats" width="1234" height="708"/>
+        <image name="tray" catalog="system" width="128" height="88"/>
+    </resources>
 </document>
